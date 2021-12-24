@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+form {
+	border: 1px solid tomato;
+	display: inline-block;
+	padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-appear{
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title-appear-active{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 500ms linear;
+}
+.filterContacts{
+  width: 400px;
+}
+.fade-appear{
+  opacity: 1;
+  /* transform: scale(0.1); */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.fade-appear-active{
+  opacity: 1;
+  transform: scale(1);
+  /* transition: all 250ms linear; */
+}
+
+.fade-enter{
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.fade-enter-active{
+  opacity: 1;
+  transform: scale(1);
+  transition: all 250ms linear;
+}
+
+.fade-exit{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active{
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 250ms linear;
+}
+
+
+.item-enter{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.item-enter-active{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 250ms linear;
+}
+
+.item-exit{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.item-exit-active{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 250ms linear;
+}
+
+.notification{
+  position: fixed;
+  top: 50px;
+  right: 50px;
   color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.notification--error{
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notification--success{
+  background-color: green;
+}
+
+.notification-enter{
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.notification-enter-active{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 250ms linear;
+}
+
+.notification-exit{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.notification-exit-active{
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 250ms linear;
 }
